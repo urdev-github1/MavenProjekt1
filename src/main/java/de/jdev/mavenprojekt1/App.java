@@ -10,13 +10,13 @@ import java.io.IOException;
 
 public class App extends Application {
 
-    private static Scene scene;
+    public static Scene scene;
 
     //Hauptprogramm
     @Override
     public void start(Stage primaryStage) throws IOException {
         //
-        scene = new Scene(loadFXML("primary"));
+        scene = new Scene(loadFXML());
 
         //Die Szene der Bühne übergeben.
         primaryStage.setScene(scene);
@@ -25,12 +25,8 @@ public class App extends Application {
         primaryStage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
-    }
-
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+    private static Parent loadFXML() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("primary" + ".fxml"));
         return fxmlLoader.load();
     }
 

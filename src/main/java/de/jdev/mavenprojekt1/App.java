@@ -12,24 +12,26 @@ public class App extends Application {
 
     public static Scene scene;
 
-    //Hauptprogramm
+    //Die Startmethode legt ein root-Element fest, eine Szene und ordnet die Szene der Stage zu.
     @Override
     public void start(Stage primaryStage) throws IOException {
-        //
-        scene = new Scene(loadFXML());
 
-        //Die Szene der Bühne übergeben.
+        //Die FXML-Datei wird aus den Ressourcen geladen.
+        Parent root = FXMLLoader.load(getClass().getResource("primary.fxml"));
+
+        //Die Scene festgelegt.
+        scene = new Scene(root);
+
+        //Die Scene (Szene) wird der Stage (Bühne) zugeordnet.
         primaryStage.setScene(scene);
         primaryStage.setTitle("????-Login");
         primaryStage.setResizable(false);
+
+        //Die Stage anzeigen.
         primaryStage.show();
     }
 
-    private static Parent loadFXML() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("primary" + ".fxml"));
-        return fxmlLoader.load();
-    }
-
+    //
     public static void main(String[] args) {
         launch();
     }

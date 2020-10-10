@@ -1,38 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<GridPane>
-   <!-- Grid-Eigenschaften -->
-   <alignment>CENTER</alignment>
-   <hgap>10</hgap>
-   <minHeight>-Infinity</minHeight>
-   <minWidth>-Infinity</minWidth>
-   <prefHeight>40</prefHeight>
-   <prefWidth>230</prefWidth>
-
-   <!-- Grid Spalten und Zeilen festlegen -->
-   <columnConstraints>
-      <ColumnConstraints halignment="LEFT" prefWidth="60.0" />
-      <ColumnConstraints halignment="LEFT" />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
-   </rowConstraints>
-
-   <!-- Controlls -->
-   <Label text= "Passwort:"/>
-
-   <PasswordField>
-      <GridPane.columnIndex>1</GridPane.columnIndex>  <!-- In Spalte 2 des Grids -->
-      <prefHeight>25</prefHeight>
-      <prefWidth>120</prefWidth>
-      <promptText>????-User (Passw.1)</promptText>
-      <focusTraversable>false</focusTraversable>
-   </PasswordField>
-
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="35.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="113.0" text="Passwort:" />
+      <PasswordField alignment="CENTER" focusTraversable="false" maxWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" promptText="????-User (Passw.1)" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <TextField alignment="CENTER" maxWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" promptText="????-User (Passw.2)" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <Button mnemonicParsing="false" prefWidth="70.0" text="PW-Gen." GridPane.halignment="CENTER" />
+   </children>
 </GridPane>

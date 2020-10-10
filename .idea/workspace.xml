@@ -140,9 +140,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dritte Version" />
     <MESSAGE value="Vierte Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vierte Version" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="683" y="299" key="#Images" timestamp="1602348161020">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="683" y="299" key="#Images/0.0.1920.1050@0.0.1920.1050" timestamp="1602348161020" />
     <state x="472" y="161" key="#Intentions" timestamp="1601808506856">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -155,26 +159,30 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1601742928551" />
-    <state x="568" y="261" key="FileChooserDialogImpl" timestamp="1602329396840">
+    <state x="568" y="261" key="FileChooserDialogImpl" timestamp="1602348159488">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="568" y="261" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1602329396840" />
-    <state width="938" height="113" key="GridCell.Tab.0.bottom" timestamp="1602334469368">
+    <state x="568" y="261" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1602348159488" />
+    <state x="755" y="392" key="Github.CreateGistDialog" timestamp="1602347551595">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="938" height="113" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602334469368" />
-    <state width="938" height="113" key="GridCell.Tab.0.center" timestamp="1602334469368">
+    <state x="755" y="392" key="Github.CreateGistDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1602347551595" />
+    <state width="889" height="99" key="GridCell.Tab.0.bottom" timestamp="1602349655280">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="938" height="113" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602334469368" />
-    <state width="938" height="113" key="GridCell.Tab.0.left" timestamp="1602334469368">
+    <state width="889" height="99" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602349655280" />
+    <state width="889" height="99" key="GridCell.Tab.0.center" timestamp="1602349655280">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="938" height="113" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602334469368" />
-    <state width="938" height="113" key="GridCell.Tab.0.right" timestamp="1602334469368">
+    <state width="889" height="99" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602349655280" />
+    <state width="889" height="99" key="GridCell.Tab.0.left" timestamp="1602349655280">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="938" height="113" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602334469368" />
+    <state width="889" height="99" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602349655280" />
+    <state width="889" height="99" key="GridCell.Tab.0.right" timestamp="1602349655280">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="889" height="99" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602349655280" />
     <state x="638" y="168" key="SettingsEditor" timestamp="1601795189939">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -183,5 +191,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="538" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1601816443566" />
+    <state x="704" y="364" width="611" height="281" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1602347661051">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="704" y="364" width="611" height="281" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1602347661051" />
   </component>
 </project>

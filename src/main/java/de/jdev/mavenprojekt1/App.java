@@ -7,8 +7,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 //
+import java.awt.MenuItem;
 import java.awt.SystemTray;
 import java.awt.TrayIcon;
 import java.awt.PopupMenu;
@@ -17,13 +20,26 @@ import java.awt.PopupMenu;
 public class App extends Application {
 
     public static Scene scene;
+    public static PrimaryController primaryController;
+
+    public MenuItem mandant1;
+    public MenuItem mandant2;
 
     //Die Startmethode legt ein root-Element fest, eine Szene und ordnet die Szene der Stage zu.
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        //Die FXML-Datei wird aus den Ressourcen geladen.
-        Parent root = FXMLLoader.load(getClass().getResource("primary.fxml"));
+        //Die FXML-Datei wird über die statischen Methode [FXMLLoader.load()] aus dem Verzeichnis 'resources' geladen.
+        //(Statische Methoden =	Methoden, die aufgerufen werden	können, ohne dass ein Objekt der Klasse	exisiert.)
+        //Parent root = FXMLLoader.load(getClass().getResource("primary.fxml"));
+
+        //VARIANTE: Eine Instanz anstelle der statischen FXMLLoader.load()-Methode verwenden!
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("primary.fxml"));
+        Parent root = fxmlLoader.load();
+
+        //Über die Instanz erfolgt der Zugriff auf getController() => Typumwandlung beachten!
+        //(Wird benötigt um das Passwort abzuftragen.)
+        primaryController = (PrimaryController) fxmlLoader.getController();
 
         //Die Scene festgelegt.
         scene = new Scene(root);
@@ -35,6 +51,10 @@ public class App extends Application {
 
         //Die Stage anzeigen.
         primaryStage.show();
+
+
+//     ---------------------------------------------------------------------------------------------------------------------------------
+
 
         //Anwendung nicht beenden, wenn das Passwortfenster geschlossen wird.
         Platform.setImplicitExit(false);
@@ -49,28 +69,28 @@ public class App extends Application {
         java.awt.Image abasTrayIcon = new ImageIcon(this.getClass().getResource("/images/trayicon.png")).getImage();
 
         //Items Firmen
-        final java.awt.MenuItem firma1 = new java.awt.MenuItem("Firma1");
-        final java.awt.MenuItem firma2 = new java.awt.MenuItem("Firma2");
-        final java.awt.MenuItem firma3 = new java.awt.MenuItem("Firma3");
-        final java.awt.MenuItem firma4 = new java.awt.MenuItem("Firma4");
-        final java.awt.MenuItem firma5 = new java.awt.MenuItem("Firma5");
-        final java.awt.MenuItem firma6 = new java.awt.MenuItem("Firma6");
-        final java.awt.MenuItem firma7 = new java.awt.MenuItem("Firma7");
-        final java.awt.MenuItem firma8 = new java.awt.MenuItem("Firma8");
-        final java.awt.MenuItem exitItem = new java.awt.MenuItem("Close");
+        mandant1 = new MenuItem("Mandant1");
+        mandant2 = new MenuItem("Mandant2");
+        final java.awt.MenuItem mandant3 = new java.awt.MenuItem("Mandant3");
+        final java.awt.MenuItem mandant4 = new java.awt.MenuItem("Mandant4");
+        final java.awt.MenuItem mandant5 = new java.awt.MenuItem("Mandant5");
+        final java.awt.MenuItem mandant6 = new java.awt.MenuItem("Mandant6");
+        final java.awt.MenuItem mandant7 = new java.awt.MenuItem("Mandant7");
+        final java.awt.MenuItem mandant8 = new java.awt.MenuItem("Mandant8");
+        final java.awt.MenuItem exitItem = new java.awt.MenuItem("Schließen");
 
         //Instanz des Popup-Menüs
         final PopupMenu popup = new PopupMenu();
 
         //Menüpunkte dem Menü hinzufügen.
-        popup.add(firma8);
-        popup.add(firma7);
-        popup.add(firma6);
-        popup.add(firma5);
-        popup.add(firma4);
-        popup.add(firma3);
-        popup.add(firma2);
-        popup.add(firma1);
+        popup.add(mandant8);
+        popup.add(mandant7);
+        popup.add(mandant6);
+        popup.add(mandant5);
+        popup.add(mandant4);
+        popup.add(mandant3);
+        popup.add(mandant2);
+        popup.add(mandant1);
         popup.add(exitItem);
 
         //Menü dem TrayIcon hinzufügen.
@@ -81,21 +101,9 @@ public class App extends Application {
 
         try {
             tray.add(trayIcon);
-        } catch(Exception e) {
+        } catch (Exception e) {
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -104,15 +112,37 @@ public class App extends Application {
 
 
 
+//     ---------------------------------------------------------------------------------------------------------------------------------
 
 
+        //Handler-Echtmandanten
+        EvtEchtMandanten hEchtMandant = new EvtEchtMandanten();
+
+        //
+        mandant1.addActionListener(hEchtMandant);
+        mandant2.addActionListener(hEchtMandant);
 
 
-
-    }
+        }
 
     //
     public static void main(String[] args) {
         launch();
     }
+
+//    //Inner Build Class
+//    private class EvtSystemTray2 implements ActionListener {
+//
+//
+//        public void actionPerformed(ActionEvent event) {
+//
+//            if (event.getSource() == mandant1) {
+//                JOptionPane.showMessageDialog(null, "Hallo von " + event.getActionCommand());
+//            }
+//
+//            if (event.getSource() == mandant2) {
+//                JOptionPane.showMessageDialog(null, "Hallo von " + event.getActionCommand());
+//            }
+//        }
+//    }
 }

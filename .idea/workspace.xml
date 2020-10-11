@@ -30,16 +30,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e98dd393-36d1-484a-bd35-e96292a1e016" name="Default Changelist" comment="Dritte Version">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/msdev.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jdev/mavenprojekt1/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jdev/mavenprojekt1/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jdev/mavenprojekt1/EvtEchtMandanten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jdev/mavenprojekt1/EvtEchtMandanten.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jdev/mavenprojekt1/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jdev/mavenprojekt1/PrimaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/jdev/mavenprojekt1/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/jdev/mavenprojekt1/primary.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/jdev/mavenprojekt1/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/jdev/mavenprojekt1/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/jdev/mavenprojekt1/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/jdev/mavenprojekt1/PrimaryController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,22 +181,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="755" y="392" key="Github.CreateGistDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1602347551595" />
-    <state width="889" height="99" key="GridCell.Tab.0.bottom" timestamp="1602438453294">
+    <state width="937" height="99" key="GridCell.Tab.0.bottom" timestamp="1602454646035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="889" height="99" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602438453294" />
-    <state width="889" height="99" key="GridCell.Tab.0.center" timestamp="1602438453293">
+    <state width="937" height="99" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602454646035" />
+    <state width="937" height="99" key="GridCell.Tab.0.center" timestamp="1602454646035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="889" height="99" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602438453293" />
-    <state width="889" height="99" key="GridCell.Tab.0.left" timestamp="1602438453293">
+    <state width="937" height="99" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602454646035" />
+    <state width="937" height="99" key="GridCell.Tab.0.left" timestamp="1602454646035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="889" height="99" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602438453293" />
-    <state width="889" height="99" key="GridCell.Tab.0.right" timestamp="1602438453293">
+    <state width="937" height="99" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602454646035" />
+    <state width="937" height="99" key="GridCell.Tab.0.right" timestamp="1602454646035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="889" height="99" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602438453293" />
+    <state width="937" height="99" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602454646035" />
     <state width="1580" height="170" key="GridCell.Tab.1.bottom" timestamp="1602438343658">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

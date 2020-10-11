@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="de.jdev.mavenprojekt1.PrimaryController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.jdev.mavenprojekt1.PrimaryController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="35.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
@@ -19,7 +14,7 @@
    <children>
       <Label alignment="CENTER" prefHeight="17.0" prefWidth="113.0" text="Passwort:" />
       <PasswordField alignment="CENTER" focusTraversable="false" maxWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" promptText="????-User (Passw.1)" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-      <TextField fx:id="pass2" alignment="CENTER" maxWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" promptText="????-User (Passw.2)" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <TextField fx:id="pass2" alignment="BOTTOM_LEFT" maxWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" promptText="????-User (Passw.2)" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
       <Button fx:id="pwgenerator" mnemonicParsing="false" onAction="#handleButtonAction" prefWidth="70.0" text="PW-Gen." GridPane.halignment="CENTER" />
    </children>
 </GridPane>

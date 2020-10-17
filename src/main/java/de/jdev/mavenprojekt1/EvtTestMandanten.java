@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 //Ereignisbehandlungsklasse
-class EvtEchtMandanten implements ActionListener {
+class EvtTestMandanten implements ActionListener {
 
     private String cmd;
     private String mandant;
@@ -28,7 +28,7 @@ class EvtEchtMandanten implements ActionListener {
 
         //Bedienung der Echtmandanten.
         switch (cmd) {
-            case "Mandant1":
+            case "Test-Mandant1":
                 //Pfad zusammenbauen
                 mandant = "firma1";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
@@ -43,8 +43,8 @@ class EvtEchtMandanten implements ActionListener {
                     Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-            break;
-            case "Mandant2":
+                break;
+            case "Test-Mandant2":
                 mandant = "firma2";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
@@ -56,8 +56,8 @@ class EvtEchtMandanten implements ActionListener {
                     Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-            break;
-            case "Mandant3":
+                break;
+            case "Test-Mandant3":
                 mandant = "firma3";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
@@ -69,8 +69,8 @@ class EvtEchtMandanten implements ActionListener {
                     Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-            break;
-            case "Mandant4":
+                break;
+            case "Test-Mandant4":
                 mandant = "firma4";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
@@ -82,8 +82,8 @@ class EvtEchtMandanten implements ActionListener {
                     Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-            break;
-            case "Mandant5":
+                break;
+            case "Test-Mandant5":
                 mandant = "firma5";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
@@ -95,8 +95,8 @@ class EvtEchtMandanten implements ActionListener {
                     Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-            break;
-            case "Mandant6":
+                break;
+            case "Test-Mandant6":
                 mandant = "firma6";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
@@ -108,8 +108,8 @@ class EvtEchtMandanten implements ActionListener {
                     Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-            break;
-            case "Mandant7":
+                break;
+            case "Test-Mandant7":
                 mandant = "firma7";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
@@ -121,8 +121,8 @@ class EvtEchtMandanten implements ActionListener {
                     Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-            break;
-            case "Mandant8":
+                break;
+            case "Test-Mandant8":
                 mandant = "firma8";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
@@ -134,7 +134,7 @@ class EvtEchtMandanten implements ActionListener {
                     Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-            break;
+                break;
 
         }
     }

@@ -30,10 +30,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e98dd393-36d1-484a-bd35-e96292a1e016" name="Default Changelist" comment="Dritte Version">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jdev/mavenprojekt1/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jdev/mavenprojekt1/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jdev/mavenprojekt1/EvtEchtMandanten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jdev/mavenprojekt1/EvtEchtMandanten.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/jdev/mavenprojekt1/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/jdev/mavenprojekt1/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MavenProjekt1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MavenProjekt1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MavenProjekt1-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MavenProjekt1-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

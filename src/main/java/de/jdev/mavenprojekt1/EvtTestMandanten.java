@@ -9,12 +9,13 @@ import java.util.logging.Logger;
 //Ereignisbehandlungsklasse
 class EvtTestMandanten implements ActionListener {
 
-    private String cmd;
-    private String mandant;
-    private String ddeserver;
-    private String path2mandant;
-    private String path2rungui;
-    private Runtime rs;
+    //lokale Variablen
+    String cmd;
+    String mandant;
+    String ddeserver;
+    String path2mandant;
+    String path2rungui;
+    Runtime rs;
 
     //Instanz vom Hauptprogramm um das Passwort hier einlesen zu können.
     App app = new App();

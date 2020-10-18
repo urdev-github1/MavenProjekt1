@@ -1,5 +1,6 @@
 package de.jdev.mavenprojekt1;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -31,110 +32,110 @@ class EvtDemoMandanten implements ActionListener {
         switch (cmd) {
             case "Demo-Mandant1":
                 //Pfad zusammenbauen
-                mandant = "firma1";
+                mandant = "demofirma1";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
                 //Mandantenstart
                 rs = Runtime.getRuntime();
                 //Kommando ausführen
-                try {
-                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-                } catch (IOException ex) {
-                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                try {
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                } catch (IOException ex) {
+//                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
                 break;
             case "Demo-Mandant2":
-                mandant = "firma2";
+                mandant = "demofirma2";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
-                try {
-                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-                } catch (IOException ex) {
-                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                try {
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                } catch (IOException ex) {
+//                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
                 break;
             case "Demo-Mandant3":
-                mandant = "firma3";
+                mandant = "demofirma3";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
-                try {
-                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-                } catch (IOException ex) {
-                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                try {
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                } catch (IOException ex) {
+//                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
                 break;
             case "Demo-Mandant4":
-                mandant = "firma4";
+                mandant = "demofirma4";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
-                try {
-                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-                } catch (IOException ex) {
-                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                try {
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                } catch (IOException ex) {
+//                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
                 break;
             case "Demo-Mandant5":
-                mandant = "firma5";
+                mandant = "demofirma5";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
-                try {
-                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-                } catch (IOException ex) {
-                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                try {
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                } catch (IOException ex) {
+//                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
                 break;
             case "Demo-Mandant6":
-                mandant = "firma6";
+                mandant = "demofirma6";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
-                try {
-                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-                } catch (IOException ex) {
-                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                try {
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                } catch (IOException ex) {
+//                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
                 break;
             case "Demo-Mandant7":
-                mandant = "firma7";
+                mandant = "demofirma7";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
-                try {
-                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-                } catch (IOException ex) {
-                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                try {
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                } catch (IOException ex) {
+//                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
                 break;
             case "Demo-Mandant8":
-                mandant = "firma8";
+                mandant = "demofirma8";
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
-                try {
-                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
-                } catch (IOException ex) {
-                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                //JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                try {
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                } catch (IOException ex) {
+//                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
                 break;
 
         }

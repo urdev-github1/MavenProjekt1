@@ -17,6 +17,7 @@ public class App extends Application {
     public static PrimaryController primaryController;
 
     //lokale Variablen
+    Stage pwFenster;        //Passwortfenster
 
     //Echt-Mandanten
     MenuItem mandant1;
@@ -55,7 +56,7 @@ public class App extends Application {
     MenuItem demo8;
 
     //Loginwechsel
-    CheckboxMenuItem pw2Item;
+    CheckboxMenuItem umschaltenItem;
 
     //Freischalten Demomandant + Beenden.
     MenuItem freiItem;
@@ -146,7 +147,7 @@ public class App extends Application {
         freiItem = new MenuItem("* Freischalten *");
 
         //Items Loginwechsel + Beenden
-        pw2Item = new CheckboxMenuItem("Login-Wechsel");
+        umschaltenItem = new CheckboxMenuItem("Login-Wechsel",false);
         exitItem = new MenuItem("Beenden");
 
         //Instanz des Popup-Menüs
@@ -192,7 +193,7 @@ public class App extends Application {
         popup.addSeparator();
 
         //Item Login-Wechsel + Beenden dem Menü zufügen.
-        popup.add(pw2Item);             //Login-Wechsel
+        popup.add(umschaltenItem);             //Login-Wechsel
         popup.addSeparator();
         popup.add(exitItem);
 
@@ -208,8 +209,14 @@ public class App extends Application {
             System.out.println("Das System-Tray konnte nicht gestartet werden.");
         }
 
-        //Exit-Event (Programm beenden).
-        exitItem.addActionListener(event -> System.exit(0));
+        // Verweis auf die Bühne in pwFenster speichern.
+        this.pwFenster = primaryStage;
+
+        //Bei Doppelklickt Passwort-Fenster wieder einblenden.
+        trayIcon.addActionListener(event -> Platform.runLater(this::PasswortFenster));
+
+//        //Exit-Event (Programm beenden).
+//        exitItem.addActionListener(event -> System.exit(0));
 
 
 //     ---------------------------------------------------------------------------------------------------------------------------------
@@ -256,6 +263,56 @@ public class App extends Application {
         demo6.addActionListener(evtDemoMandanten);
         demo7.addActionListener(evtDemoMandanten);
         demo8.addActionListener(evtDemoMandanten);
+
+        //ActionListener Beenden
+        exitItem.addActionListener(evtEchtMandanten);
+
+        //Checkbox-Status auswerten
+        //PrimaryController Objekt erstellen / Zugriff auf die Klasse PrimaryController
+        PrimaryController primaryController = new PrimaryController();
+        umschaltenItem.addItemListener(primaryController);
+
+
+
+
+
+//        ActionListener al = new ActionListener() {
+//            public void actionPerformed(ActionEvent event) {
+//                String cmd = event.getActionCommand();
+//                JOptionPane.showMessageDialog(null, cmd);
+//            }
+//        };
+
+//        //Passwortbox 1 bzw. 2 aktivieren
+//        umschaltenItem.addItemListener(new ItemListener() {
+//
+//            @Override
+//            public void itemStateChanged(ItemEvent ie) {
+//                JOptionPane.showMessageDialog(null, "Login-Wechsel");
+////                if (pass1.isVisible()) {
+////                    pass2.setVisible(true);
+////                    generator.setVisible(true);  //Button
+////                    pass1.setVisible(false);
+////                } else {
+////                    pass2.setVisible(false);
+////                    generator.setVisible(false);
+////                    pass1.setVisible(true);
+////                }
+//            }
+//        });
+
+
+    }
+
+//     ---------------------------------------------------------------------------------------------------------------------------------
+
+    //Passwortfenster zurückholen
+    private void PasswortFenster() {
+
+        if (pwFenster != null) {
+            pwFenster.show();
+            pwFenster.toFront();
+        }
     }
 
     //

@@ -13,21 +13,7 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 //Event-Handling
-public class PrimaryController implements Initializable, ItemListener {
-
-     //boolean schalter = false;
-
-
-    //@FXML
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        //pass2.setText("Test");
-        //pass2.setVisible(true);
-    }
-
-
-
-    //@FXML - Steht vor privaten Member/Methoden um den Zugriff aus FXML heraus zu erlauben.
+public class PrimaryController implements ItemListener {
 
     @FXML
     private Button pwgenerator;
@@ -36,11 +22,43 @@ public class PrimaryController implements Initializable, ItemListener {
     private PasswordField pass1;    //Entspricht der fx:id=pass1
 
     @FXML
-    private TextField pass2;    //Entspricht der fx:id=pass2
+    private TextField pass2;        //Entspricht der fx:id=pass2
 
-    //Getter => Abfrage des Passwortes im Hauptprogramm (App).
+    //Getter => Abfrage im EvtEchtmandanten, EvtTestmandanten, EvtDemomandanten
     public String getPassw() {
         return pass2.getText();
+    }
+
+    //Setter => TextField ein- und ausblenden.
+    public void setVisiblePassField(Boolean passFieldVisible) {
+        pass2.setVisible(passFieldVisible);
+    }
+
+    //Setter => PasswordField ein- und ausblenden.
+    public void setVisibleTextField(Boolean textFieldVisible) {
+        pass2.setVisible(textFieldVisible);
+    }
+
+//    //Setter => Passwort von außerhalb setzen.
+//    public void setPass(String passwort) {
+//        pass2.setText(passwort);
+//    }
+
+    //Checkbox-Status 'Login-Wechsel' auswerten.
+    App app = new App();
+
+    @Override
+    public void itemStateChanged(ItemEvent event) {
+
+        if (event.getStateChange() == ItemEvent.SELECTED){
+            //Aufruf der Setter Methode für das Textfeld.
+            app.primaryController.setVisibleTextField(false);
+            //Aufruf der Setter Methode für das Passwortfeld.
+            app.primaryController.setVisiblePassField(true);
+        } else {
+            app.primaryController.setVisibleTextField(true);
+            app.primaryController.setVisiblePassField(false);
+        }
     }
 
     //Passwortgenerator
@@ -63,43 +81,4 @@ public class PrimaryController implements Initializable, ItemListener {
         //Passwort in das Textfeld schreiben
         pass2.setText(String.valueOf(password));
     }
-
-    //Checkbox-Status 'Login-Wechsel' auswerten.
-
-    @Override
-    public void itemStateChanged(ItemEvent event) {
-
-
-        String zustand = "deselektiert";
-        //schalter = true;
-        //pass2.setText("Test");
-
-        setData(false);
-
-
-        if (event.getStateChange() == ItemEvent.SELECTED){
-            zustand = "selektiert";
-
-
-//            pass2.setVisible(true);
-//                    generator.setVisible(true);  //Button
-//            pass1.setVisible(false);
-//        } else {
-//            pass2.setVisible(false);
-////                    generator.setVisible(false);
-//            pass1.setVisible(true);
-        }
-
-        System.out.println("CheckboxDemo: " + event.getItem() + " " + zustand);
-    }
-
-
-
-    @FXML
-    public void setData(Boolean data) {
-        pass2.setVisible(data);
-
-    }
-
-
 }

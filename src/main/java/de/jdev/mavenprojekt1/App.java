@@ -56,7 +56,7 @@ public class App extends Application {
     MenuItem demo8;
 
     //Loginwechsel
-    CheckboxMenuItem umschaltenItem;
+    CheckboxMenuItem loginwechsel;
 
     //Freischalten Demomandant + Beenden.
     MenuItem freiItem;
@@ -147,7 +147,7 @@ public class App extends Application {
         freiItem = new MenuItem("* Freischalten *");
 
         //Items Loginwechsel + Beenden
-        umschaltenItem = new CheckboxMenuItem("Login-Wechsel",false);
+        loginwechsel = new CheckboxMenuItem("Login-Wechsel",false);
         exitItem = new MenuItem("Beenden");
 
         //Instanz des Popup-Menüs
@@ -193,7 +193,7 @@ public class App extends Application {
         popup.addSeparator();
 
         //Item Login-Wechsel + Beenden dem Menü zufügen.
-        popup.add(umschaltenItem);             //Login-Wechsel
+        popup.add(loginwechsel);             //Login-Wechsel
         popup.addSeparator();
         popup.add(exitItem);
 
@@ -270,7 +270,7 @@ public class App extends Application {
         //Checkbox-Status auswerten
         //PrimaryController Objekt erstellen / Zugriff auf die Klasse PrimaryController
         PrimaryController primaryController = new PrimaryController();
-        umschaltenItem.addItemListener(primaryController);
+        loginwechsel.addItemListener(primaryController);
 
 
 
@@ -284,7 +284,7 @@ public class App extends Application {
 //        };
 
 //        //Passwortbox 1 bzw. 2 aktivieren
-//        umschaltenItem.addItemListener(new ItemListener() {
+//        loginwechsel.addItemListener(new ItemListener() {
 //
 //            @Override
 //            public void itemStateChanged(ItemEvent ie) {

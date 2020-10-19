@@ -1,7 +1,5 @@
 package de.jdev.mavenprojekt1;
 
-import javafx.application.Platform;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

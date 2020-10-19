@@ -12,9 +12,9 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label alignment="CENTER" prefHeight="17.0" prefWidth="113.0" text="Passwort:" />
-      <PasswordField fx:id="pass1" alignment="CENTER" focusTraversable="false" maxWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" promptText="????-User (Passw.1)" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-      <TextField fx:id="pass2" alignment="BOTTOM_LEFT" focusTraversable="false" maxWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" promptText="????-User (Passw.2)" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-      <Button fx:id="pwgenerator" mnemonicParsing="false" onAction="#handleButtonAction" prefWidth="70.0" text="PW-Gen." visible="false" GridPane.halignment="CENTER" />
+      <Label fx:id="lblLabel" alignment="CENTER" prefHeight="17.0" prefWidth="113.0" text="Passwort:" />
+      <PasswordField fx:id="passField1" alignment="BOTTOM_LEFT" focusTraversable="false" maxWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" promptText="????-User (Passw.1)" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <TextField fx:id="passField2" alignment="BOTTOM_LEFT" focusTraversable="false" maxWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" promptText="????-User (Passw.2)" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <Button fx:id="btnButton" mnemonicParsing="false" onAction="#handleButtonAction" prefWidth="70.0" text="PW-Gen." visible="false" GridPane.halignment="CENTER" />
    </children>
 </GridPane>

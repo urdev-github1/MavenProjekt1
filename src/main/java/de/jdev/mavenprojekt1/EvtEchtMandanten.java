@@ -10,20 +10,23 @@ import java.util.logging.Logger;
 //Ereignisbehandlungsklasse
 class EvtEchtMandanten implements ActionListener {
 
-    //lokale Variablen
-    String cmd;
-    String mandant;
-    String ddeserver;
-    String path2mandant;
-    String path2rungui;
-    Runtime rs;
-
-    //Instanz vom Hauptprogramm um das Passwort hier einlesen zu können.
-    App app = new App();
-
     //Diese Methode wird bei jedem Event aufgerufen.
     @Override
     public void actionPerformed(ActionEvent event) {
+
+        //lokale Variablen
+        String cmd;
+        String mandant;
+        String ddeserver;
+        String path2mandant;
+        String path2rungui;
+        String passwort;
+        Runtime rs;
+
+        //Instanz vom Hauptprogramm um das Passwort hier einlesen zu können.
+        App app = new App();
+
+        passwort = app.primaryController.getPassw();
 
         //Text des Source-Objektes.
         cmd = event.getActionCommand();
@@ -40,11 +43,11 @@ class EvtEchtMandanten implements ActionListener {
                 rs = Runtime.getRuntime();
                 //Kommando ausführen
 //                try {
-//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
 //                } catch (IOException ex) {
 //                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
 //                }
-                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant2":
                 mandant = "firma2";
@@ -53,11 +56,11 @@ class EvtEchtMandanten implements ActionListener {
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
 //                try {
-//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
 //                } catch (IOException ex) {
 //                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
 //                }
-                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant3":
                 mandant = "firma3";
@@ -66,11 +69,11 @@ class EvtEchtMandanten implements ActionListener {
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
 //                try {
-//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
 //                } catch (IOException ex) {
 //                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
 //                }
-                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant4":
                 mandant = "firma4";
@@ -79,11 +82,11 @@ class EvtEchtMandanten implements ActionListener {
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
 //                try {
-//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
 //                } catch (IOException ex) {
 //                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
 //                }
-                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant5":
                 mandant = "firma5";
@@ -92,11 +95,11 @@ class EvtEchtMandanten implements ActionListener {
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
 //                try {
-//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
 //                } catch (IOException ex) {
 //                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
 //                }
-                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant6":
                 mandant = "firma6";
@@ -105,11 +108,11 @@ class EvtEchtMandanten implements ActionListener {
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
 //                try {
-//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
 //                } catch (IOException ex) {
 //                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
 //                }
-                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant7":
                 mandant = "firma7";
@@ -118,11 +121,11 @@ class EvtEchtMandanten implements ActionListener {
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
 //                try {
-//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
 //                } catch (IOException ex) {
 //                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
 //                }
-                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant8":
                 mandant = "firma8";
@@ -131,11 +134,11 @@ class EvtEchtMandanten implements ActionListener {
                 path2rungui = path2mandant + "\\rungui.exe";
                 rs = Runtime.getRuntime();
 //                try {
-//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+//                    rs.exec(path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
 //                } catch (IOException ex) {
 //                    Logger.getLogger(EvtEchtMandanten.class.getName()).log(Level.SEVERE, null, ex);
 //                }
-                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + app.primaryController.getPassw());
+                JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
 //            case "Login-Wechsel":
 //                JOptionPane.showMessageDialog(null, "Login-Wechsel");

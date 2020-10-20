@@ -16,6 +16,16 @@ public class App extends Application {
     public static Scene scene;
     public static PrimaryController primaryController;
 
+    //
+    String firma1 = "firma1";
+    String firma2 = "firma2";
+    String firma3 = "firma3";
+    String firma4 = "firma4";
+    String firma5 = "firma5";
+    String firma6 = "firma6";
+    String firma7 = "firma7";
+    String firma8 = "firma8";
+
     //lokale Variablen
     Stage pwFenster;        //Passwortfenster
 

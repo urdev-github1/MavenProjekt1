@@ -15,8 +15,17 @@ class EvtEchtMandanten implements ActionListener {
     public void actionPerformed(ActionEvent event) {
 
         //lokale Variablen
-        String cmd;
         String mandant;
+        String mandant1;
+        String mandant2;
+        String mandant3;
+        String mandant4;
+        String mandant5;
+        String mandant6;
+        String mandant7;
+        String mandant8;
+
+        String cmd;
         String ddeserver;
         String path2mandant;
         String path2rungui;
@@ -25,8 +34,17 @@ class EvtEchtMandanten implements ActionListener {
 
         //Instanz vom Hauptprogramm um das Passwort hier einlesen zu können.
         App app = new App();
-
         passwort = app.primaryController.getPassw();
+
+        //
+        mandant1 = app.firma1;
+        mandant2 = app.firma2;
+        mandant3 = app.firma3;
+        mandant4 = app.firma4;
+        mandant5 = app.firma5;
+        mandant6 = app.firma6;
+        mandant7 = app.firma7;
+        mandant8 = app.firma8;
 
         //Text des Source-Objektes.
         cmd = event.getActionCommand();
@@ -35,7 +53,7 @@ class EvtEchtMandanten implements ActionListener {
         switch (cmd) {
             case "Mandant1":
                 //Pfad zusammenbauen
-                mandant = "firma1";
+                mandant = mandant1;
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
@@ -50,7 +68,7 @@ class EvtEchtMandanten implements ActionListener {
                 JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant2":
-                mandant = "firma2";
+                mandant = mandant2;
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
@@ -63,7 +81,7 @@ class EvtEchtMandanten implements ActionListener {
                 JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant3":
-                mandant = "firma3";
+                mandant = mandant3;
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
@@ -76,7 +94,7 @@ class EvtEchtMandanten implements ActionListener {
                 JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant4":
-                mandant = "firma4";
+                mandant = mandant4;
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
@@ -89,7 +107,7 @@ class EvtEchtMandanten implements ActionListener {
                 JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant5":
-                mandant = "firma5";
+                mandant = mandant5;
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
@@ -102,7 +120,7 @@ class EvtEchtMandanten implements ActionListener {
                 JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant6":
-                mandant = "firma6";
+                mandant = mandant6;
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
@@ -115,7 +133,7 @@ class EvtEchtMandanten implements ActionListener {
                 JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant7":
-                mandant = "firma7";
+                mandant = mandant7;
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";
@@ -128,7 +146,7 @@ class EvtEchtMandanten implements ActionListener {
                 JOptionPane.showMessageDialog(null, "" + path2rungui + " * " + ddeserver + " " + path2mandant + " " + passwort);
             break;
             case "Mandant8":
-                mandant = "firma8";
+                mandant = mandant8;
                 ddeserver = "abas-EKS_abas-ERP" + " " + mandant;
                 path2mandant = "\\\\abas-fs1\\erp" + mandant;
                 path2rungui = path2mandant + "\\rungui.exe";

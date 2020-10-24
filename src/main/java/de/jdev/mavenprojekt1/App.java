@@ -8,6 +8,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 
 //Hauptprogramm
@@ -104,7 +106,7 @@ public class App extends Application {
     CheckboxMenuItem loginwechsel;
 
     //Freischalten Demomandant + Beenden.
-    MenuItem freiItem;
+    MenuItem freischalten;
     MenuItem exitItem;
 
     //Popup-Menü
@@ -191,7 +193,17 @@ public class App extends Application {
         demo7 = new MenuItem(demoBez7);
         demo8 = new MenuItem(demoBez8);
         //Demomandanten freischalten
-        freiItem = new MenuItem("* Freischalten *");
+        freischalten = new MenuItem("* Freischalten *");
+
+        //Bedienung sperren
+        demo1.setEnabled(false);
+        demo2.setEnabled(false);
+        demo3.setEnabled(false);
+        demo4.setEnabled(false);
+        demo5.setEnabled(false);
+        demo6.setEnabled(false);
+        demo7.setEnabled(false);
+        demo8.setEnabled(false);
 
         //Items Loginwechsel + Beenden
         loginwechsel = new CheckboxMenuItem("Login-Wechsel",false);
@@ -237,12 +249,12 @@ public class App extends Application {
         demoMandant.add(demo3);
         demoMandant.add(demo2);
         demoMandant.add(demo1);
-        demoMandant.add(freiItem);
+        demoMandant.add(freischalten);
 
         popup.addSeparator();
 
         //Item Login-Wechsel + Beenden dem Menü zufügen.
-        popup.add(loginwechsel);             //Login-Wechsel
+        popup.add(loginwechsel);
         popup.addSeparator();
         popup.add(exitItem);
 
@@ -270,53 +282,80 @@ public class App extends Application {
 
         //Echt-Mandanten
         //ActionListener Objekt erstellen / Zugriff auf die Klasse EvtEchtMandanten
-        EventsEcht evtEchtMandanten = new EventsEcht();
+        EventsEcht evtEcht = new EventsEcht();
 
         //ActionListener Objekte den Items zuordnen.
-        echt1.addActionListener(evtEchtMandanten);
-        echt2.addActionListener(evtEchtMandanten);
-        echt3.addActionListener(evtEchtMandanten);
-        echt4.addActionListener(evtEchtMandanten);
-        echt5.addActionListener(evtEchtMandanten);
-        echt6.addActionListener(evtEchtMandanten);
-        echt7.addActionListener(evtEchtMandanten);
-        echt8.addActionListener(evtEchtMandanten);
+        echt1.addActionListener(evtEcht);
+        echt2.addActionListener(evtEcht);
+        echt3.addActionListener(evtEcht);
+        echt4.addActionListener(evtEcht);
+        echt5.addActionListener(evtEcht);
+        echt6.addActionListener(evtEcht);
+        echt7.addActionListener(evtEcht);
+        echt8.addActionListener(evtEcht);
 
         //Test-Mandanten
         //ActionListener Objekt erstellen / Zugriff auf die Klasse EvtTestMandanten
-        EventsTest evtTestMandanten = new EventsTest();
+        EventsTest evtTest = new EventsTest();
 
         //ActionListener Objekte den Items zuordnen.
-        test1.addActionListener(evtTestMandanten);
-        test2.addActionListener(evtTestMandanten);
-        test3.addActionListener(evtTestMandanten);
-        test4.addActionListener(evtTestMandanten);
-        test5.addActionListener(evtTestMandanten);
-        test6.addActionListener(evtTestMandanten);
-        test7.addActionListener(evtTestMandanten);
-        test8.addActionListener(evtTestMandanten);
+        test1.addActionListener(evtTest);
+        test2.addActionListener(evtTest);
+        test3.addActionListener(evtTest);
+        test4.addActionListener(evtTest);
+        test5.addActionListener(evtTest);
+        test6.addActionListener(evtTest);
+        test7.addActionListener(evtTest);
+        test8.addActionListener(evtTest);
 
         //Demo-Mandanten
         //ActionListener Objekt erstellen / Zugriff auf die Klasse EvtDemoMandanten
-        EventsDemo evtDemoMandanten = new EventsDemo();
+        EventsDemo evtDemo = new EventsDemo();
 
         //ActionListener Objekte den Items zuordnen.
-        demo1.addActionListener(evtDemoMandanten);
-        demo2.addActionListener(evtDemoMandanten);
-        demo3.addActionListener(evtDemoMandanten);
-        demo4.addActionListener(evtDemoMandanten);
-        demo5.addActionListener(evtDemoMandanten);
-        demo6.addActionListener(evtDemoMandanten);
-        demo7.addActionListener(evtDemoMandanten);
-        demo8.addActionListener(evtDemoMandanten);
+        demo1.addActionListener(evtDemo);
+        demo2.addActionListener(evtDemo);
+        demo3.addActionListener(evtDemo);
+        demo4.addActionListener(evtDemo);
+        demo5.addActionListener(evtDemo);
+        demo6.addActionListener(evtDemo);
+        demo7.addActionListener(evtDemo);
+        demo8.addActionListener(evtDemo);
 
-        //ActionListener Beenden
-        exitItem.addActionListener(evtEchtMandanten);
-
-        //Checkbox-Status auswerten
-        //PrimaryController Objekt erstellen / Zugriff auf die Klasse PrimaryController
+//-------------------------------------------------------------------------------------------------------------------------------------
+        //Instanz PrimaryController
         PrimaryController primaryController = new PrimaryController();
+
+        //DialogBox-Event (DialogBox zum Freischalten der Demo-Mandanten aufrufen).
+        //https://docs.oracle.com/javafx/2/swing/swing-fx-interoperability.htm#CHDIEEJE
+        freischalten.addActionListener(new ActionListener() {
+            @Override public void actionPerformed( ActionEvent e ) {
+
+                //DialogBox unter JavaFX starten!
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        SecondaryController dialogBox = new SecondaryController();
+
+                        //Demo-Mandanten freischalten (Rückmeldung von der DialogBox).
+                        demo1.setEnabled(dialogBox.freischalten);
+                        demo2.setEnabled(dialogBox.freischalten);
+                        demo3.setEnabled(dialogBox.freischalten);
+                        demo4.setEnabled(dialogBox.freischalten);
+                        demo5.setEnabled(dialogBox.freischalten);
+                        demo6.setEnabled(dialogBox.freischalten);
+                        demo7.setEnabled(dialogBox.freischalten);
+                        demo8.setEnabled(dialogBox.freischalten);
+                    }
+                });
+            }
+        });
+
+        //Checkbox-Status auswerten => Klasse PrimaryController
         loginwechsel.addItemListener(primaryController);
+
+        //Exit-Event (Programm beenden).
+        exitItem.addActionListener(event -> System.exit(0));
     }
 
     //-------------------------------------------------------------------------------------------------------------------------------------

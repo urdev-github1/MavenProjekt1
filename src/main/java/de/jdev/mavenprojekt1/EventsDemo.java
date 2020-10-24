@@ -59,9 +59,6 @@ class EventsDemo implements ActionListener {
             case button8:
                 Ausfuehren(app.firma8);
                 break;
-            case "Beenden":
-                System.exit(0);
-                break;
         }
     }
 

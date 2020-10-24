@@ -16,7 +16,12 @@ public class App extends Application {
     public static Scene scene;
     public static PrimaryController primaryController;
 
-    //
+    //Testmodus eingeschaltet, wenn die Variable testmodus=true
+    Boolean testmodus = true;
+
+    //-------------------------------------------------------------------------------------------------------------------------------------
+
+    //Mandantennamen
     String firma1 = "firma1";
     String firma2 = "firma2";
     String firma3 = "firma3";
@@ -26,23 +31,53 @@ public class App extends Application {
     String firma7 = "firma7";
     String firma8 = "firma8";
 
-    //lokale Variablen
+    //Buttontexte Echtmandanten
+    String echtBez1 = "Firma1";
+    String echtBez2 = "Firma2";
+    String echtBez3 = "Firma3";
+    String echtBez4 = "Firma4";
+    String echtBez5 = "Firma5";
+    String echtBez6 = "Firma6";
+    String echtBez7 = "Firma7";
+    String echtBez8 = "Firma8";
+    
+    //Buttontexte Testtmandanten
+    String testBez1 = "test" + firma1;
+    String testBez2 = "test" + firma2;
+    String testBez3 = "test" + firma3;
+    String testBez4 = "test" + firma4;
+    String testBez5 = "test" + firma5;
+    String testBez6 = "test" + firma6;
+    String testBez7 = "test" + firma7;
+    String testBez8 = "test" + firma8;
+
+    //Buttontexte Demotmandanten
+    String demoBez1 = "demo" + firma1;
+    String demoBez2 = "demo" + firma2;
+    String demoBez3 = "demo" + firma3;
+    String demoBez4 = "demo" + firma4;
+    String demoBez5 = "demo" + firma5;
+    String demoBez6 = "demo" + firma6;
+    String demoBez7 = "demo" + firma7;
+    String demoBez8 = "demo" + firma8;
+
+    //Stage
     Stage pwFenster;        //Passwortfenster
 
-    //Echt-Mandanten
-    MenuItem mandant1;
-    MenuItem mandant2;
-    MenuItem mandant3;
-    MenuItem mandant4;
-    MenuItem mandant5;
-    MenuItem mandant6;
-    MenuItem mandant7;
-    MenuItem mandant8;
+    //Button Echt-Mandanten
+    MenuItem echt1;
+    MenuItem echt2;
+    MenuItem echt3;
+    MenuItem echt4;
+    MenuItem echt5;
+    MenuItem echt6;
+    MenuItem echt7;
+    MenuItem echt8;
 
     //Unterverzeichnis für die Test-Mandanten
     Menu testMandant;
 
-    //Test-Mandanten
+    //Button Test-Mandanten
     MenuItem test1;
     MenuItem test2;
     MenuItem test3;
@@ -55,7 +90,7 @@ public class App extends Application {
     //Unterverzeichnis für die Demo-Mandanten.
     Menu demoMandant;
 
-    //Demo-Mandanten
+    //Button Demo-Mandanten
     MenuItem demo1;
     MenuItem demo2;
     MenuItem demo3;
@@ -72,8 +107,10 @@ public class App extends Application {
     MenuItem freiItem;
     MenuItem exitItem;
 
-    // + Popup-Menü
+    //Popup-Menü
     PopupMenu popup;
+
+    //-------------------------------------------------------------------------------------------------------------------------------------
 
     //Die Startmethode legt ein root-Element an, legt damit eine Szene fest und ordnet die Szene der Stage zu.
     @Override
@@ -102,9 +139,7 @@ public class App extends Application {
         //Die Stage anzeigen.
         primaryStage.show();
 
-
-//     ---------------------------------------------------------------------------------------------------------------------------------
-
+        //---------------------------------------------------------------------------------------------------------------------------------
 
         //Anwendung nicht beenden, wenn das Passwortfenster geschlossen wird.
         Platform.setImplicitExit(false);
@@ -118,41 +153,43 @@ public class App extends Application {
         //Bilddatei laden
         java.awt.Image abasTrayIcon = new ImageIcon(this.getClass().getResource("/images/trayicon.png")).getImage();
 
+        //---------------------------------------------------------------------------------------------------------------------------------
+
         //Items der Echt-Mandanten erzeugen.
-        mandant1 = new MenuItem("Mandant1");
-        mandant2 = new MenuItem("Mandant2");
-        mandant3 = new MenuItem("Mandant3");
-        mandant4 = new MenuItem("Mandant4");
-        mandant5 = new MenuItem("Mandant5");
-        mandant6 = new MenuItem("Mandant6");
-        mandant7 = new MenuItem("Mandant7");
-        mandant8 = new MenuItem("Mandant8");
+        echt1 = new MenuItem(echtBez1);
+        echt2 = new MenuItem(echtBez2);
+        echt3 = new MenuItem(echtBez3);
+        echt4 = new MenuItem(echtBez4);
+        echt5 = new MenuItem(echtBez5);
+        echt6 = new MenuItem(echtBez6);
+        echt7 = new MenuItem(echtBez7);
+        echt8 = new MenuItem(echtBez8);
 
         //Unterverzeichnis für die Test-Mandanten
         testMandant = new Menu("Test-Mandanten");
 
         //Items im Verzeichnis 'Test-Mandanten' erzeugen.
-        test1 = new MenuItem("Test-Mandant1");
-        test2 = new MenuItem("Test-Mandant2");
-        test3 = new MenuItem("Test-Mandant3");
-        test4 = new MenuItem("Test-Mandant4");
-        test5 = new MenuItem("Test-Mandant5");
-        test6 = new MenuItem("Test-Mandant6");
-        test7 = new MenuItem("Test-Mandant7");
-        test8 = new MenuItem("Test-Mandant8");
+        test1 = new MenuItem(testBez1);
+        test2 = new MenuItem(testBez2);
+        test3 = new MenuItem(testBez3);
+        test4 = new MenuItem(testBez4);
+        test5 = new MenuItem(testBez5);
+        test6 = new MenuItem(testBez6);
+        test7 = new MenuItem(testBez7);
+        test8 = new MenuItem(testBez8);
 
         //Unterverzeichnis für die Demo-Mandanten
         demoMandant = new Menu("Demo-Mandanten");
 
         //Items im Verzeichnis 'Demo-Mandanten' erzeugen.
-        demo1 = new MenuItem("Demo-Mandant1");
-        demo2 = new MenuItem("Demo-Mandant2");
-        demo3 = new MenuItem("Demo-Mandant3");
-        demo4 = new MenuItem("Demo-Mandant4");
-        demo5 = new MenuItem("Demo-Mandant5");
-        demo6 = new MenuItem("Demo-Mandant6");
-        demo7 = new MenuItem("Demo-Mandant7");
-        demo8 = new MenuItem("Demo-Mandant8");
+        demo1 = new MenuItem(demoBez1);
+        demo2 = new MenuItem(demoBez2);
+        demo3 = new MenuItem(demoBez3);
+        demo4 = new MenuItem(demoBez4);
+        demo5 = new MenuItem(demoBez5);
+        demo6 = new MenuItem(demoBez6);
+        demo7 = new MenuItem(demoBez7);
+        demo8 = new MenuItem(demoBez8);
         //Demomandanten freischalten
         freiItem = new MenuItem("* Freischalten *");
 
@@ -160,18 +197,20 @@ public class App extends Application {
         loginwechsel = new CheckboxMenuItem("Login-Wechsel",false);
         exitItem = new MenuItem("Beenden");
 
+        //---------------------------------------------------------------------------------------------------------------------------------
+
         //Instanz des Popup-Menüs
         popup = new PopupMenu();
 
         //Echt-Mandant Items dem Menü hinzufügen.
-        popup.add(mandant8);
-        popup.add(mandant7);
-        popup.add(mandant6);
-        popup.add(mandant5);
-        popup.add(mandant4);
-        popup.add(mandant3);
-        popup.add(mandant2);
-        popup.add(mandant1);
+        popup.add(echt8);
+        popup.add(echt7);
+        popup.add(echt6);
+        popup.add(echt5);
+        popup.add(echt4);
+        popup.add(echt3);
+        popup.add(echt2);
+        popup.add(echt1);
 
         popup.addSeparator();
 
@@ -219,36 +258,33 @@ public class App extends Application {
             System.out.println("Das System-Tray konnte nicht gestartet werden.");
         }
 
+        //---------------------------------------------------------------------------------------------------------------------------------
+
         // Verweis auf die Bühne in pwFenster speichern.
         this.pwFenster = primaryStage;
 
         //Bei Doppelklickt Passwort-Fenster wieder einblenden.
         trayIcon.addActionListener(event -> Platform.runLater(this::PasswortFenster));
 
-//        //Exit-Event (Programm beenden).
-//        exitItem.addActionListener(event -> System.exit(0));
-
-
-//     ---------------------------------------------------------------------------------------------------------------------------------
-
+        //---------------------------------------------------------------------------------------------------------------------------------
 
         //Echt-Mandanten
         //ActionListener Objekt erstellen / Zugriff auf die Klasse EvtEchtMandanten
-        EvtEchtMandanten evtEchtMandanten = new EvtEchtMandanten();
+        EventsEcht evtEchtMandanten = new EventsEcht();
 
         //ActionListener Objekte den Items zuordnen.
-        mandant1.addActionListener(evtEchtMandanten);
-        mandant2.addActionListener(evtEchtMandanten);
-        mandant3.addActionListener(evtEchtMandanten);
-        mandant4.addActionListener(evtEchtMandanten);
-        mandant5.addActionListener(evtEchtMandanten);
-        mandant6.addActionListener(evtEchtMandanten);
-        mandant7.addActionListener(evtEchtMandanten);
-        mandant8.addActionListener(evtEchtMandanten);
+        echt1.addActionListener(evtEchtMandanten);
+        echt2.addActionListener(evtEchtMandanten);
+        echt3.addActionListener(evtEchtMandanten);
+        echt4.addActionListener(evtEchtMandanten);
+        echt5.addActionListener(evtEchtMandanten);
+        echt6.addActionListener(evtEchtMandanten);
+        echt7.addActionListener(evtEchtMandanten);
+        echt8.addActionListener(evtEchtMandanten);
 
         //Test-Mandanten
         //ActionListener Objekt erstellen / Zugriff auf die Klasse EvtTestMandanten
-        EvtTestMandanten evtTestMandanten = new EvtTestMandanten();
+        EventsTest evtTestMandanten = new EventsTest();
 
         //ActionListener Objekte den Items zuordnen.
         test1.addActionListener(evtTestMandanten);
@@ -262,7 +298,7 @@ public class App extends Application {
 
         //Demo-Mandanten
         //ActionListener Objekt erstellen / Zugriff auf die Klasse EvtDemoMandanten
-        EvtDemoMandanten evtDemoMandanten = new EvtDemoMandanten();
+        EventsDemo evtDemoMandanten = new EventsDemo();
 
         //ActionListener Objekte den Items zuordnen.
         demo1.addActionListener(evtDemoMandanten);
@@ -281,40 +317,9 @@ public class App extends Application {
         //PrimaryController Objekt erstellen / Zugriff auf die Klasse PrimaryController
         PrimaryController primaryController = new PrimaryController();
         loginwechsel.addItemListener(primaryController);
-
-
-
-
-
-//        ActionListener al = new ActionListener() {
-//            public void actionPerformed(ActionEvent event) {
-//                String cmd = event.getActionCommand();
-//                JOptionPane.showMessageDialog(null, cmd);
-//            }
-//        };
-
-//        //Passwortbox 1 bzw. 2 aktivieren
-//        loginwechsel.addItemListener(new ItemListener() {
-//
-//            @Override
-//            public void itemStateChanged(ItemEvent ie) {
-//                JOptionPane.showMessageDialog(null, "Login-Wechsel");
-////                if (pass1.isVisible()) {
-////                    pass2.setVisible(true);
-////                    generator.setVisible(true);  //Button
-////                    pass1.setVisible(false);
-////                } else {
-////                    pass2.setVisible(false);
-////                    generator.setVisible(false);
-////                    pass1.setVisible(true);
-////                }
-//            }
-//        });
-
-
     }
 
-//     ---------------------------------------------------------------------------------------------------------------------------------
+    //-------------------------------------------------------------------------------------------------------------------------------------
 
     //Passwortfenster zurückholen
     private void PasswortFenster() {
